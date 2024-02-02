@@ -1,7 +1,13 @@
 async function main() {
 
-    let response = await fetch('http://localhost:3001/listBooks')
-    let books = await response.json()
+    let response = await fetch('http://localhost:3001/listBooks') //,{
+        //method: "GET",
+        //headers: null,
+        //body: null,
+    //});
+
+    let books = await response.json();
+   // console.log(books);
 
     books.forEach(renderBook)
 }
